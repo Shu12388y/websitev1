@@ -2,8 +2,6 @@
 import Image from "next/image";
 import { useState } from "react";
 
-
-
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState("Erectile Dysfunction");
 
@@ -52,6 +50,52 @@ export default function Home() {
 
   return (
     <div className="bg-gray-50 w-full">
+      <section className="w-full">
+        <img
+          className="object-cover w-full h-[40rem]"
+          src="https://images.pexels.com/photos/2324837/pexels-photo-2324837.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        />
+      </section>
+
+      <section>
+        <div className="container mx-auto px-4 py-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Card 1 */}
+            <div className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="bg-blue-500 relative h-64">
+                <img
+                  src="https://images.pexels.com/photos/360622/pexels-photo-360622.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt="Card image"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="h-48 bg-green-500">
+                <img
+                  src="https://images.pexels.com/photos/161688/medical-tablets-pills-drug-161688.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="Card image"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="h-48 bg-purple-500">
+                <img
+                  src="https://images.pexels.com/photos/2280551/pexels-photo-2280551.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="Card image"
+                  className="h-64 object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="bg-gradient-to-br from-blue-50 to-white flex flex-col items-center justify-center py-12 sm:py-16 lg:py-20 ">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
@@ -680,9 +724,9 @@ export default function Home() {
                 {/* Testimonial overlay */}
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
                   <p className="text-white italic text-sm mb-2">
-                  &quot;The team at Sexuloon helped me address my ED issues with
-                    compassion and effective treatments. I couldn&apos;t be happier
-                    with the results.&quot;
+                    &quot;The team at Sexuloon helped me address my ED issues
+                    with compassion and effective treatments. I couldn&apos;t be
+                    happier with the results.&quot;
                   </p>
                   <p className="text-white font-medium text-xs">
                     - James K., 45
@@ -708,8 +752,8 @@ export default function Home() {
                 className="object-contain mb-4"
               />
               <p className="text-gray-400 mb-4">
-                Empowering men&apos;s sexual health with medically proven solutions
-                and personalized care.
+                Empowering men&apos;s sexual health with medically proven
+                solutions and personalized care.
               </p>
               <div className="flex space-x-4">
                 <a
