@@ -1,7 +1,7 @@
 import React from "react";
 import SideBar from "@/components/ui/sidebar";
 
-function layout({ children }: { children: React.ReactNode }) {
+function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex">
       <SideBar />
@@ -10,4 +10,4 @@ function layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default layout;
+export default Layout;

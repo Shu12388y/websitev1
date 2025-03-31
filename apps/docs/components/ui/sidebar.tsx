@@ -1,23 +1,42 @@
 import React from "react";
+import Link from "next/link";
 
 function SideBar() {
   return (
-    <div className="flex h-screen flex-col justify-between border-e border-gray-100 bg-white">
+    <div className="flex h-screen w-52 flex-col justify-between border-e border-gray-100 bg-white">
       <div className="px-4 py-6">
         <span className="grid h-10 w-32 place-content-center rounded-lg bg-gray-100 text-xs text-gray-600">
-          Logo
+          Sexloom
         </span>
 
         <ul className="mt-6 space-y-1">
           <li>
-            <a
-              href="#"
+            <Link
+              prefetch
+              href="/dashboard"
               className="block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700"
             >
-              General
-            </a>
+              Home
+            </Link>
           </li>
-
+          <li>
+            <Link
+              prefetch
+              href="/inventory"
+              className="block rounded-lg  px-4 py-2 text-sm font-medium text-gray-700  hover:bg-gray-100 hover:text-gray-700"
+            >
+              Inventory
+            </Link>
+          </li>
+          <li>
+            <Link
+              prefetch
+              href="/orders"
+              className="block rounded-lg  px-4 py-2 text-sm font-medium text-gray-700  hover:bg-gray-100 hover:text-gray-700"
+            >
+              Orders
+            </Link>
+          </li>
           <li>
             <details className="group [&_summary::-webkit-details-marker]:hidden">
               <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
@@ -41,12 +60,13 @@ function SideBar() {
 
               <ul className="mt-2 space-y-1 px-4">
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    prefetch
+                    href="/teams"
                     className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                   >
-                    Banned Users
-                  </a>
+                    Users
+                  </Link>
                 </li>
 
                 <li>
