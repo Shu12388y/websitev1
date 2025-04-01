@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function SideBar() {
   return (
-    <div className="flex h-screen w-52 flex-col justify-between border-e border-gray-100 bg-white">
+    <div className="flex h-screen w-52 flex-col justify-between border-e border-gray-100 bg-white relative">
       <div className="px-4 py-6">
         <span className="grid h-10 w-32 place-content-center rounded-lg bg-gray-100 text-xs text-gray-600">
           Sexloom
@@ -35,6 +35,15 @@ function SideBar() {
               className="block rounded-lg  px-4 py-2 text-sm font-medium text-gray-700  hover:bg-gray-100 hover:text-gray-700"
             >
               Orders
+            </Link>
+          </li>
+          <li>
+            <Link
+              prefetch
+              href="/logistics/1234"
+              className="block rounded-lg  px-4 py-2 text-sm font-medium text-gray-700  hover:bg-gray-100 hover:text-gray-700"
+            >
+              Logistics
             </Link>
           </li>
           <li>

@@ -10,6 +10,7 @@ import {
   Search,
   SlidersHorizontal
 } from 'lucide-react';
+import Link from 'next/link';
 
 const InventoryManagement = () => {
   // Sample product data
@@ -64,71 +65,8 @@ const InventoryManagement = () => {
     return matchesSearch;
   });
 
-  // Create a new product
-  const handleCreateProduct = () => {
-    // Validate required fields
-    if (!newProduct.name || !newProduct.sku || !newProduct.category || !newProduct.price || !newProduct.quantity) {
-      alert("Please fill in all required fields");
-      return;
-    }
-
-    // Determine status based on quantity
-    const quantity = parseInt(newProduct.quantity);
-    const status = quantity <= 0 ? "Out of Stock" : quantity <= 20 ? "Low Stock" : "In Stock";
-
-    const createdProduct = {
-      id: products.length > 0 ? Math.max(...products.map(p => p.id)) + 1 : 1,
-      name: newProduct.name,
-      sku: newProduct.sku,
-      category: newProduct.category,
-      price: parseFloat(newProduct.price),
-      quantity,
-      description: newProduct.description,
-      status
-    };
-
-    setProducts([...products, createdProduct]);
-    setNewProduct({
-      name: "",
-      sku: "",
-      category: "",
-      price: "",
-      quantity: "",
-      description: ""
-    });
-    setIsCreateModalOpen(false);
-  };
-
-  // Update an existing product
-  const handleUpdateProduct = () => {
-    if (!currentProduct) return;
-
-    // Validate required fields
-    if (!currentProduct.name || !currentProduct.sku || !currentProduct.category || !currentProduct.price || currentProduct.quantity === "") {
-      alert("Please fill in all required fields");
-      return;
-    }
-
-    // Determine status based on quantity
-    const quantity = parseInt(currentProduct.quantity);
-    const status = quantity <= 0 ? "Out of Stock" : quantity <= 20 ? "Low Stock" : "In Stock";
-
-    const updatedProducts = products.map(product => {
-      if (product.id === currentProduct.id) {
-        return {
-          ...currentProduct,
-          price: parseFloat(currentProduct.price),
-          quantity,
-          status
-        };
-      }
-      return product;
-    });
-
-    setProducts(updatedProducts);
-    setIsEditModalOpen(false);
-    setCurrentProduct(null);
-  };
+ 
+  
 
   // Delete a product
   const handleDeleteProduct = () => {
@@ -140,11 +78,7 @@ const InventoryManagement = () => {
     setCurrentProduct(null);
   };
 
-  // Edit product handler
-  const openEditModal = (product) => {
-    setCurrentProduct({ ...product });
-    setIsEditModalOpen(true);
-  };
+ 
 
   // Delete product handler
   const openDeleteModal = (product) => {
@@ -202,21 +136,20 @@ const InventoryManagement = () => {
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-3xl font-bold">Inventory Management</h1>
         <div className="flex items-center gap-4">
-          <button className="px-3 py-2 border rounded-md text-sm flex items-center gap-2">
-            <FileDown className="h-4 w-4" />
-            Export
-          </button>
+          
           <button className="px-3 py-2 border rounded-md text-sm flex items-center gap-2">
             <RefreshCw className="h-4 w-4" />
             Refresh
           </button>
+          <Link href={"/inventory/createproduct"}>
           <button 
             className="px-3 py-2 bg-blue-600 text-white rounded-md text-sm flex items-center gap-2"
             
-          >
+            >
             <PlusCircle className="h-4 w-4" />
             Add Product
           </button>
+            </Link>
         </div>
       </div>
 

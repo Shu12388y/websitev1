@@ -1,0 +1,12 @@
+{
+  "name": "@repo/types-config",
+  "version": "1.0.0",
+  "description": "types definition",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
