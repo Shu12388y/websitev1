@@ -37,13 +37,13 @@ function Navbar() {
             Products
           </Link>
           <Link
-            href="/consultation"
+            href="/"
             className="font-medium text-gray-800 hover:text-blue-600 transition-colors duration-200"
           >
             Consultation
           </Link>
           <Link
-            href="/about"
+            href="/"
             className="font-medium text-gray-800 hover:text-blue-600 transition-colors duration-200"
           >
             About Us
@@ -164,14 +164,14 @@ function Navbar() {
               Products
             </Link>
             <Link
-              href="/consultation"
+              href="/"
               className="font-medium text-gray-800 hover:text-blue-600 py-2 border-b border-gray-100"
               onClick={() => setIsMenuOpen(false)}
             >
               Consultation
             </Link>
             <Link
-              href="/about"
+              href="/"
               className="font-medium text-gray-800 hover:text-blue-600 py-2"
               onClick={() => setIsMenuOpen(false)}
             >
