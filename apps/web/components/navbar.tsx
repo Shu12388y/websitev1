@@ -1,6 +1,5 @@
 "use client";
-import React,{useState} from "react";
-import Image from "next/image";
+import React, { useState } from "react";
 import Link from "next/link";
 
 function Navbar() {
@@ -13,7 +12,11 @@ function Navbar() {
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         <div className="flex items-center">
-        <b>Sexuloon</b>
+          <img
+            className="w-16 rounded-full object-cover shadow-md"
+            src="https://res.cloudinary.com/frbjijb/image/upload/v1746774002/website/yzwvotlrj00ukpswwa7a.jpg"
+            alt="Logo"
+          />
         </div>
 
         {/* Desktop Navigation */}

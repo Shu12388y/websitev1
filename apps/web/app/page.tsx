@@ -11,8 +11,8 @@ export default function Home() {
       id: 1,
       image:
         "https://res.cloudinary.com/frbjijb/image/upload/v1746769255/website/yubmgsuqrodcmxoo0ooa.jpg",
-      price: 49.99,
-      originalPrice: 80,
+      price: 699,
+      originalPrice: 899,
       title: "TestoFix",
       description:
         "Lorem ipsum dolor sit amet consectetur adipiscing elit. Labore nobis iure obcaecati pariatur.",
@@ -23,8 +23,8 @@ export default function Home() {
       id: 2,
       image:
         "https://res.cloudinary.com/frbjijb/image/upload/v1746769196/website/ok3wqmg2zqfte03bbbwk.jpg",
-      price: 49.99,
-      originalPrice: 80,
+      price: 699,
+      originalPrice: 899,
       title: "Ejacure",
       description:
         "Lorem ipsum dolor sit amet consectetur adipiscing elit. Labore nobis iure obcaecati pariatur.",
@@ -35,8 +35,8 @@ export default function Home() {
       id: 3,
       image:
         "https://res.cloudinary.com/frbjijb/image/upload/v1746769189/website/xfyrhyyymdr7cmrcf36o.jpg",
-      price: 49.99,
-      originalPrice: 80,
+      price: 699,
+      originalPrice: 899,
       title: "ErectoSure",
       description:
         "Lorem ipsum dolor sit amet consectetur adipiscing elit. Labore nobis iure obcaecati pariatur.",
@@ -146,10 +146,10 @@ export default function Home() {
                 <div className="p-5">
                   <div className="flex items-center gap-2 mb-2">
                     <span className="font-bold text-lg text-gray-900">
-                      ${product.price.toFixed(2)}
+                      Rs {product.price.toFixed(2)}
                     </span>
                     <span className="text-gray-500 line-through text-sm">
-                      ${product.originalPrice.toFixed(2)}
+                      Rs {product.originalPrice.toFixed(2)}
                     </span>
                   </div>
                   <h3 className="font-medium text-xl mb-2">{product.title}</h3>
@@ -184,25 +184,8 @@ export default function Home() {
                   </div>
 
                   <div className="flex gap-3">
-                    <button className="flex-1 py-2.5 border border-gray-300 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors duration-200 flex items-center justify-center">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-4 w-4 mr-1"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                        />
-                      </svg>
-                      Add to Cart
-                    </button>
                     <button className="flex-1 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors duration-200 flex items-center justify-center shadow-sm">
-                      Buy Now
+                      Coming Soon
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-4 w-4 ml-1"
@@ -277,10 +260,10 @@ export default function Home() {
                 <div className="p-5">
                   <div className="flex items-center gap-2 mb-2">
                     <span className="font-bold text-lg text-gray-900">
-                      ${product.price.toFixed(2)}
+                      Rs {product.price.toFixed(2)}
                     </span>
                     <span className="text-gray-500 line-through text-sm">
-                      ${product.originalPrice.toFixed(2)}
+                      Rs {product.originalPrice.toFixed(2)}
                     </span>
                   </div>
                   <h3 className="font-medium text-xl mb-2">{product.title}</h3>
@@ -315,25 +298,8 @@ export default function Home() {
                   </div>
 
                   <div className="flex gap-3">
-                    <button className="flex-1 py-2.5 border border-gray-300 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors duration-200 flex items-center justify-center">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-4 w-4 mr-1"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                        />
-                      </svg>
-                      Add to Cart
-                    </button>
                     <button className="flex-1 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors duration-200 flex items-center justify-center shadow-sm">
-                      Buy Now
+                      Coming Soon
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-4 w-4 ml-1"
