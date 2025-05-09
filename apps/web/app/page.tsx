@@ -9,10 +9,11 @@ export default function Home() {
   const products = [
     {
       id: 1,
-      image: "/product1.jpg",
+      image:
+        "https://res.cloudinary.com/frbjijb/image/upload/v1746769255/website/yubmgsuqrodcmxoo0ooa.jpg",
       price: 49.99,
       originalPrice: 80,
-      title: "Wireless Headphones",
+      title: "TestoFix",
       description:
         "Lorem ipsum dolor sit amet consectetur adipiscing elit. Labore nobis iure obcaecati pariatur.",
       rating: 4.5,
@@ -20,10 +21,11 @@ export default function Home() {
     },
     {
       id: 2,
-      image: "/product2.jpg",
+      image:
+        "https://res.cloudinary.com/frbjijb/image/upload/v1746769196/website/ok3wqmg2zqfte03bbbwk.jpg",
       price: 49.99,
       originalPrice: 80,
-      title: "Wireless Headphones",
+      title: "Ejacure",
       description:
         "Lorem ipsum dolor sit amet consectetur adipiscing elit. Labore nobis iure obcaecati pariatur.",
       rating: 4.7,
@@ -31,10 +33,11 @@ export default function Home() {
     },
     {
       id: 3,
-      image: "/product3.jpg",
+      image:
+        "https://res.cloudinary.com/frbjijb/image/upload/v1746769189/website/xfyrhyyymdr7cmrcf36o.jpg",
       price: 49.99,
       originalPrice: 80,
-      title: "Wireless Headphones",
+      title: "ErectoSure",
       description:
         "Lorem ipsum dolor sit amet consectetur adipiscing elit. Labore nobis iure obcaecati pariatur.",
       rating: 4.2,
@@ -52,7 +55,7 @@ export default function Home() {
   return (
     <div className="bg-gray-50 w-full">
       <section className="w-full">
-      <SideShow/>
+        <SideShow />
       </section>
 
       <section id="feature-images">
@@ -60,19 +63,19 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Card 1 */}
             <div className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
-              <div className="bg-blue-500 relative h-64">
+              <div className="bg-blue-500 relative">
                 <img
-                  src="https://images.pexels.com/photos/360622/pexels-photo-360622.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  src="https://res.cloudinary.com/frbjijb/image/upload/v1746769167/website/vprwczqzjjsbspxlgu2f.jpg"
                   alt="Card image"
-                  className="object-cover"
+                  className=""
                 />
               </div>
             </div>
             {/* Card 2 */}
             <div className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
-              <div className="bg-blue-500 relative h-64">
+              <div className="bg-blue-500 relative ">
                 <img
-                  src="https://images.pexels.com/photos/360622/pexels-photo-360622.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  src="https://res.cloudinary.com/frbjijb/image/upload/v1746769166/website/yi9ui51dtohyyneaw3hc.jpg"
                   alt="Card image"
                   className="object-cover"
                 />
@@ -80,9 +83,9 @@ export default function Home() {
             </div>
             {/* Card 3 */}
             <div className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
-              <div className="bg-blue-500 relative h-64">
+              <div className="bg-blue-500 relative">
                 <img
-                  src="https://images.pexels.com/photos/360622/pexels-photo-360622.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  src="https://res.cloudinary.com/frbjijb/image/upload/v1746769161/website/ht8xj8elunsfyh0epzi1.jpg"
                   alt="Card image"
                   className="object-cover"
                 />
@@ -91,7 +94,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
 
       {/* Best Sellers Section - Enhanced product cards and filtering */}
       <section className="py-16 sm:py-24 bg-gray-50">
@@ -126,12 +128,11 @@ export default function Home() {
                 key={product.id}
                 className="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-lg transition-shadow duration-300"
               >
-                <div className="relative h-64 overflow-hidden">
-                  <Image
+                <div className="relative  w-full overflow-hidden">
+                  <img
                     src={product.image}
                     alt={product.title}
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute top-0 right-0 bg-blue-600 text-white font-medium px-3 py-1 rounded-bl-lg">
                     {Math.round(
@@ -258,12 +259,11 @@ export default function Home() {
                 key={product.id}
                 className="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-lg transition-shadow duration-300"
               >
-                <div className="relative h-64 overflow-hidden">
-                  <Image
+                <div className="relative  w-full overflow-hidden">
+                  <img
                     src={product.image}
                     alt={product.title}
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute top-0 right-0 bg-blue-600 text-white font-medium px-3 py-1 rounded-bl-lg">
                     {Math.round(
@@ -641,155 +641,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Best Sellers Section - Enhanced product cards and filtering */}
-      <section className="py-16 sm:py-24 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4 sm:mb-0">
-              Best Sellers
-            </h2>
-
-            {/* Categories - Improved filter buttons */}
-            <div className="flex flex-wrap gap-3">
-              {categories.map((category, index) => (
-                <button
-                  key={index}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${
-                    activeCategory === category
-                      ? "bg-blue-600 text-white"
-                      : "bg-blue-100 text-blue-800 hover:bg-blue-200"
-                  }`}
-                  onClick={() => setActiveCategory(category)}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Products Grid - Enhanced cards with ratings and hover effects */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.map((product) => (
-              <div
-                key={product.id}
-                className="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-lg transition-shadow duration-300"
-              >
-                <div className="relative h-64 overflow-hidden">
-                  <Image
-                    src={product.image}
-                    alt={product.title}
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute top-0 right-0 bg-blue-600 text-white font-medium px-3 py-1 rounded-bl-lg">
-                    {Math.round(
-                      ((product.originalPrice - product.price) /
-                        product.originalPrice) *
-                        100
-                    )}
-                    % OFF
-                  </div>
-                </div>
-                <div className="p-5">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="font-bold text-lg text-gray-900">
-                      ${product.price.toFixed(2)}
-                    </span>
-                    <span className="text-gray-500 line-through text-sm">
-                      ${product.originalPrice.toFixed(2)}
-                    </span>
-                  </div>
-                  <h3 className="font-medium text-xl mb-2">{product.title}</h3>
-                  <p className="text-gray-600 mb-4 text-sm">
-                    {product.description}
-                  </p>
-
-                  {/* Rating Stars */}
-                  <div className="flex items-center mb-4">
-                    <div className="flex items-center mr-2">
-                      {[...Array(5)].map((_, i) => (
-                        <svg
-                          key={i}
-                          xmlns="http://www.w3.org/2000/svg"
-                          className={`h-4 w-4 ${
-                            i < Math.floor(product.rating)
-                              ? "text-yellow-400"
-                              : i < product.rating
-                                ? "text-yellow-400"
-                                : "text-gray-300"
-                          }`}
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      ))}
-                    </div>
-                    <span className="text-sm text-gray-600">
-                      ({product.reviewCount} reviews)
-                    </span>
-                  </div>
-
-                  <div className="flex gap-3">
-                    <button className="flex-1 py-2.5 border border-gray-300 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors duration-200 flex items-center justify-center">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-4 w-4 mr-1"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                        />
-                      </svg>
-                      Add to Cart
-                    </button>
-                    <button className="flex-1 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors duration-200 flex items-center justify-center shadow-sm">
-                      Buy Now
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-4 w-4 ml-1"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* View All Products Button */}
-          <div className="mt-12 text-center">
-            <button className="bg-white border border-blue-600 text-blue-600 hover:bg-blue-50 font-medium px-8 py-3 rounded-full inline-flex items-center transition-colors duration-200">
-              View All Products
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 ml-2"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </section>
-
       {/* Doctor Consultation & Expert Q&A Sections - Combined into a features section */}
       <section className="py-16 sm:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -1079,7 +930,7 @@ export default function Home() {
               <ul className="space-y-2">
                 <li>
                   <a
-                    href="#"
+                    href="/"
                     className="text-gray-400 hover:text-white transition-colors duration-200"
                   >
                     Home
@@ -1087,7 +938,7 @@ export default function Home() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/products"
                     className="text-gray-400 hover:text-white transition-colors duration-200"
                   >
                     Products
@@ -1095,7 +946,7 @@ export default function Home() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/"
                     className="text-gray-400 hover:text-white transition-colors duration-200"
                   >
                     Consultations
@@ -1103,7 +954,7 @@ export default function Home() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/aboutus"
                     className="text-gray-400 hover:text-white transition-colors duration-200"
                   >
                     About Us
@@ -1126,7 +977,7 @@ export default function Home() {
               <ul className="space-y-2">
                 <li>
                   <a
-                    href="#"
+                    href="/products"
                     className="text-gray-400 hover:text-white transition-colors duration-200"
                   >
                     Erectile Dysfunction
@@ -1134,7 +985,7 @@ export default function Home() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/products"
                     className="text-gray-400 hover:text-white transition-colors duration-200"
                   >
                     Premature Ejaculation
@@ -1142,26 +993,10 @@ export default function Home() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/products"
                     className="text-gray-400 hover:text-white transition-colors duration-200"
                   >
                     Low Testosterone
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-white transition-colors duration-200"
-                  >
-                    Hair Loss
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-white transition-colors duration-200"
-                  >
-                    Skin Care
                   </a>
                 </li>
               </ul>
@@ -1208,19 +1043,19 @@ export default function Home() {
             </p>
             <div className="flex space-x-6">
               <a
-                href="#"
+                href="/privacy&policy"
                 className="text-gray-400 text-sm hover:text-white transition-colors duration-200"
               >
                 Privacy Policy
               </a>
               <a
-                href="#"
+                href="terms&conditions"
                 className="text-gray-400 text-sm hover:text-white transition-colors duration-200"
               >
                 Terms of Service
               </a>
               <a
-                href="#"
+                href="/ShippingPolicy"
                 className="text-gray-400 text-sm hover:text-white transition-colors duration-200"
               >
                 Shipping Policy

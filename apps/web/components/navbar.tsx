@@ -13,13 +13,7 @@ function Navbar() {
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         <div className="flex items-center">
-          <Image
-            src="/logo.png"
-            alt="Sexuloon Logo"
-            width={130}
-            height={40}
-            className="object-contain"
-          />
+        <b>Sexuloon</b>
         </div>
 
         {/* Desktop Navigation */}
@@ -43,7 +37,7 @@ function Navbar() {
             Consultation
           </Link>
           <Link
-            href="/"
+            href="/aboutus"
             className="font-medium text-gray-800 hover:text-blue-600 transition-colors duration-200"
           >
             About Us
